@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CV digital Dufour Norah</title>
+	<link rel="stylesheet" href="style.css">
+	
+
+</head>
+
+<body>
+
+<div class="ok">
+<h1>Dufour Norah</h1>
+<h3>Mon profil</h3>
+<h5>Bonjour, je m'appelle Norah et je suis actuellement étudiante à AUDENCIA.</h5>
+     <img src="cv-picture.jpg" alt="Mon CV" width="400" height="534">
+<p>
+  Mon ambition est d'allier théorie et pratique, de m'épanouir professionnellement tout en poursuivant mes études. L'alternance est l'opportunité de démontrer mon engagement et mes compétences, dans le but de contribuer de manière significative à une équipe dynamique.
+</p>
+</div>
+
+<div class="yo">
+<h3>Intérêts et Loisirs</h3>
+<p>
+
+<ul></ul>
+
+	<p><li> Lecture (romans) : Participation aux prix littéraires Goncourt et Les incorruptible - lecture de roman de genre variés - échange et débats</li></p>
+
+
+
+	<p><li> Sport : J'ai fait 10 ans de gymnastique dont la dernière en sport étude. J'ai aussi fait de l'équitation. Je pense que ma détermination me vient de ces sports car on est ammené à beaucoup tomber, mais le plus important est de se relever.</li></p>
+
+
+
+	<p><li> Cuisine : J'adore cuisiner depuis toute petite. Même si certaine de mes expériences culinaires n'étaient pas fameuses...</li></p>
+
+
+
+	<p><li> Cinema : Participation aux prix cinématographique Jean Renoir - visionnage de film puis rédaction et critiques argumentée, débats.</li></p>
+
+
+
+	<p><li> Automobile : J'ai un certain intérêts pour l'automobile grâce à mon père qui m'emmener voir des courses de Rallye à Haguenau.</li></p>
+
+
+
+	<li> Voyage : Je n'ai pas visité beaucoup de pays car étant petite mes parents privilégier la découverte de notre pays la France. Toutefois, j'aimerai énormement voyager aux quatre coins du monde pour découvrir de nouvelles cultures et des horizon différents.</li>
+</p>
+</div>
+
+<div class="eyes">
+<h3>Mes réseaux sociaux</h3>
+
+<ul>
+	<li>
+	<a href="https://www.instagram.com/norah.dfr?igsh=dHhqNHg5OTJsdDV5&utm_source=qr"target="_blank">
+		<img src="instagram-picture.png" alt="facebook" width="25" height="23">
+	</a>
+	</li>
+	
+	<li>
+	<a href="https://www.facebook.com/profile.php?id=61550127605628"target="_blank">
+		<img src="facebook-picture.png" alt="facebook" width="25" height="22">
+	</a> 
+    </li>
+	
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+</head>
+<body>
+    <h5>Me contacter</h5>
+    <p>Envoyez-moi un email : <a href="mailto:contact@example.com">norah.dufour@audencia.com</a></p>
+</body>
+</html>
+
+</ul>
+</div>
+
+</body>
+</html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrousel d'Images avec Hauteur Fixe</title>
+    <style>
+        /* Style pour le conteneur du carrousel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 400px; /* Hauteur fixe du conteneur du carrousel */
+        }
+
+        /* Style pour les images dans le carrousel */
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.3s ease;
+            height: 100%; /* Occupe toute la hauteur du conteneur */
+        }
+
+        .carousel-image {
+            width: auto; /* Ajuste automatiquement la largeur en fonction de la hauteur */
+            height: 100%; /* Occupe toute la hauteur du conteneur */
+            object-fit: cover; /* Garde le ratio d'aspect et remplit l'espace disponible */
+        }
+
+        /* Style pour les boutons de navigation */
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Retour sur image</h3>
+
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img class="carousel-image" src="image-picture.jpg" alt="Image 1">
+            <img class="carousel-image" src="imagee-picture.jpg" alt="Image 2">
+            <img class="carousel-image" src="imageee-picture.jpg" alt="Image 3">
+            <img class="carousel-image" src="imageeee-picture.jpg" alt="Image 4">
+            <img class="carousel-image" src="imageeeee-picture.jpg" alt="Image 5">
+        </div>
+        
+        <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-image');
+        const totalSlides = slides.length;
+
+        function moveSlide(n) {
+            slideIndex += n;
+            if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            } else if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            }
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            const slideWidth = slides[0].clientWidth;
+            const offset = -slideIndex * slideWidth;
+            document.querySelector('.carousel-slide').style.transform = `translateX(${offset}px)`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retour en Haut de la Page</title>
+    <style>
+        /* Style pour le bouton de retour en haut */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFA500;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        #backToTopBtn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Contenu de la page (simulé pour l'exemple) -->
+    <div style="height: 2000px;">
+        <!-- Placeholder pour créer une longue page -->
+    </div>
+
+    <!-- Bouton pour retourner en haut de la page -->
+    <button id="backToTopBtn" onclick="scrollToTop()">Haut de Page</button>
+
+    <script>
+        // Fonction pour faire défiler jusqu'en haut de la page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Fait défiler en douceur
+            });
+        }
+
+        // Afficher le bouton lorsque l'utilisateur fait défiler vers le bas
+        window.onscroll = function() {
+            var backToTopBtn = document.getElementById('backToTopBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
